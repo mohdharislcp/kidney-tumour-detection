@@ -1,0 +1,12 @@
+
+#shorten terminal path in git bash, https://gemini.google.com/app/7520829c640a699c
+export PS1='\u@\h:\W\$ '  
+
+# start git bash from terminal
+start "" "C:\Program Files\Git\git-bash.exe" 
+
+# shorten path in terminal
+function prompt { "PS $(Split-Path -Leaf -Path (Get-Location))> " }
+
+# shorten path in git bash 
+PROMPT_DIRTRIM=1
